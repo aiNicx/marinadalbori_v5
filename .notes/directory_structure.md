@@ -8,6 +8,7 @@
   - hero.jpg
   - logo-black.svg
   - logo-white.svg
+  - restaurant-food.jpg
  - file.svg
  - globe.svg
  - next.svg
@@ -18,6 +19,7 @@
   - **(routes)/**
    - **components/**
     - hero.tsx
+    - restaurant-section.tsx
    - page.tsx
   - favicon.ico
   - globals.css
@@ -52,4 +54,5 @@
 - tsconfig.json
 - update_directory.ps1
 
-\\\
+\\\
+

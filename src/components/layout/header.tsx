@@ -24,7 +24,7 @@ export function Header({ isHeroVisible = true }: HeaderProps) {
         hasScrolled && "shadow-md",
         isTransparent
           ? "bg-transparent"
-          : "bg-background/80 backdrop-blur-sm border-b"
+          : "bg-white border-b"
       )}
     >
       <div className="w-full h-16 sm:h-20 lg:h-24 flex items-center justify-between px-4 sm:px-6 lg:px-16">
@@ -95,7 +95,7 @@ export function Header({ isHeroVisible = true }: HeaderProps) {
                 "rounded-full px-4 lg:px-6 text-sm lg:text-base font-medium",
                 isTransparent
                   ? "bg-white text-black hover:bg-white/90"
-                  : "bg-primary text-white hover:bg-primary/90"
+                  : "bg-black text-white hover:bg-black/90"
               )}
             >
               Prenota un Tavolo

@@ -1,6 +1,6 @@
 Below is a concise set of guidelines for building and maintaining the marinadalbori website with Next.js, Supabase, and Tailwind CSS. These instructions aim to keep the codebase clean, scalable, and consistent.
 1A. Directory Structure guideline
-**Pages Router** (the one you’re using!) organizes routes under `pages/`, with file-based routing. This structure is entirely compatible with your Next.js setup.
+Please create page's specific components (like sections!) in app/(routes)/[page name]/components or app/(routes)/components for the home page.
 src/
 ├── app/
 │   ├── (routes)/           # Raggruppa le route pubbliche
