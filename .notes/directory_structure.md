@@ -5,6 +5,11 @@
 \\\
 - **public/**
  - **images/**
+  - **dishes/**
+   - dish-1.jpg
+   - dish-2.jpg
+   - dish-3.jpg
+   - dish-4.jpg
   - hero.jpg
   - logo-black.svg
   - logo-white.svg
@@ -19,6 +24,7 @@
   - **(routes)/**
    - **components/**
     - hero.tsx
+    - la-nostra-cucina.tsx
     - restaurant-section.tsx
    - page.tsx
   - favicon.ico

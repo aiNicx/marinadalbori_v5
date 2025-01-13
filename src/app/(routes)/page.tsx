@@ -1,6 +1,7 @@
 import { Header } from "@/components/layout/header";
 import { Hero } from "./components/hero";
 import { RestaurantSection } from "./components/restaurant-section";
+import { LaNostaCucina } from "./components/la-nostra-cucina";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export default function HomePage() {
           ctaHref="#menu"
         />
         <RestaurantSection />
+        <LaNostaCucina />
         {/* Altre sezioni della home page verranno aggiunte qui */}
       </main>
     </>

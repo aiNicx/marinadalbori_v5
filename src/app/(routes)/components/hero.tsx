@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Image } from "@/components/ui/image";
+import Link from "next/link";
 
 interface HeroProps {
   subtitle: string;
@@ -53,11 +54,12 @@ export function Hero({
           {ctaText && (
             <Button
               asChild
-              variant="secondary"
               size="lg"
-              className="mt-8 sm:mt-10 md:mt-12 rounded-full px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-base font-normal bg-white/95 hover:bg-white text-black shadow-lg"
+              className="mt-8 bg-white hover:bg-white/90 text-black"
             >
-              <a href={ctaHref}>{ctaText}</a>
+              <Link href={ctaHref}>
+                {ctaText}
+              </Link>
             </Button>
           )}
         </div>

@@ -78,27 +78,28 @@ export function Header({ isHeroVisible = true }: HeaderProps) {
           {/* Auth Buttons */}
           <div className="flex items-center space-x-4 lg:space-x-6 ml-8 lg:ml-16">
             <Button
-              variant="ghost"
-              size="sm"
+              asChild
+              size="lg"
               className={cn(
-                "rounded-full px-4 lg:px-6 text-sm lg:text-base font-medium hidden sm:inline-flex",
-                isTransparent
-                  ? "text-white hover:bg-white/10"
-                  : "text-foreground hover:bg-foreground/10"
+                "bg-white/90 hover:bg-white text-black border border-black/10",
+                isTransparent && "bg-black/90 hover:bg-black text-white border-white/10"
               )}
             >
-              Sign in
+              <Link href="/sign-in">
+                Sign in
+              </Link>
             </Button>
             <Button
-              size="sm"
+              asChild
+              size="lg"
               className={cn(
-                "rounded-full px-4 lg:px-6 text-sm lg:text-base font-medium",
-                isTransparent
-                  ? "bg-white text-black hover:bg-white/90"
-                  : "bg-black text-white hover:bg-black/90"
+                "bg-black hover:bg-black/90 text-white",
+                isTransparent && "bg-white hover:bg-white/90 text-black"
               )}
             >
-              Prenota un Tavolo
+              <Link href="/prenota">
+                Prenota
+              </Link>
             </Button>
           </div>
         </div>
@@ -108,16 +109,16 @@ export function Header({ isHeroVisible = true }: HeaderProps) {
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
               <Button
-                variant="ghost"
+                variant="outline"
                 size="icon"
                 className={cn(
-                  "h-10 w-10 sm:h-12 sm:w-12",
+                  "ml-4 p-2",
                   isTransparent
-                    ? "text-white hover:text-white/80 hover:bg-white/10"
-                    : "text-foreground"
+                    ? "border-white/20 text-white hover:bg-white/20 bg-black/20 backdrop-blur-sm"
+                    : "border-black/20 text-black hover:bg-black/10 bg-white/80"
                 )}
               >
-                <Menu className="h-6 w-6 sm:h-8 sm:w-8" />
+                <Menu className="h-6 w-6" />
                 <span className="sr-only">Menu</span>
               </Button>
             </SheetTrigger>
@@ -162,17 +163,28 @@ export function Header({ isHeroVisible = true }: HeaderProps) {
                 </Link>
                 <div className="pt-6 sm:pt-8 flex flex-col gap-3 sm:gap-4">
                   <Button 
-                    variant="outline" 
-                    size="lg" 
-                    className="rounded-full text-base sm:text-lg"
+                    asChild
+                    size="lg"
+                    className={cn(
+                      "bg-white/90 hover:bg-white text-black border border-black/10",
+                      isTransparent && "bg-black/90 hover:bg-black text-white border-white/10"
+                    )}
                   >
-                    Sign in
+                    <Link href="/sign-in">
+                      Sign in
+                    </Link>
                   </Button>
                   <Button 
-                    size="lg" 
-                    className="rounded-full text-base sm:text-lg"
+                    asChild
+                    size="lg"
+                    className={cn(
+                      "bg-black hover:bg-black/90 text-white",
+                      isTransparent && "bg-white hover:bg-white/90 text-black"
+                    )}
                   >
-                    Prenota un Tavolo
+                    <Link href="/prenota">
+                      Prenota
+                    </Link>
                   </Button>
                 </div>
               </nav>
