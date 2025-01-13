@@ -23,7 +23,7 @@ export default function HomePage() {
           ctaHref="#menu"
         />
         <Container>
-          <div className="flex flex-col gap-32 sm:gap-40 md:gap-48 lg:gap-56 py-24 md:py-32">
+          <div className="flex flex-col gap-16 sm:gap-20 md:gap-24 lg:gap-28 py-16 md:py-20">
             <RestaurantSection />
             <LaNostaCucina />
             <BeachSection />
