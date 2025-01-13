@@ -5,6 +5,9 @@
 \\\
 - **public/**
  - **images/**
+  - **beaches/**
+   - beach-1.jpg
+   - beach-2.jpg
   - **dishes/**
    - dish-1.jpg
    - dish-2.jpg
@@ -23,6 +26,7 @@
  - **app/**
   - **(routes)/**
    - **components/**
+    - beach-section.tsx
     - hero.tsx
     - la-nostra-cucina.tsx
     - restaurant-section.tsx
@@ -51,6 +55,7 @@
 - .windsurfrules
 - eslint.config.mjs
 - next-env.d.ts
+- next.config.js
 - next.config.ts
 - package-lock.json
 - package.json
@@ -60,5 +65,4 @@
 - tsconfig.json
 - update_directory.ps1
 
-\\\
-
+\\\

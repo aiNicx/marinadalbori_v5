@@ -98,7 +98,7 @@ export function Header({ isHeroVisible = true }: HeaderProps) {
               )}
             >
               <Link href="/prenota">
-                Prenota
+                Prenota un tavolo
               </Link>
             </Button>
           </div>
@@ -183,7 +183,7 @@ export function Header({ isHeroVisible = true }: HeaderProps) {
                     )}
                   >
                     <Link href="/prenota">
-                      Prenota
+                      Prenota un tavolo
                     </Link>
                   </Button>
                 </div>
