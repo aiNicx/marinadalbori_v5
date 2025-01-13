@@ -50,7 +50,13 @@
  - **hooks/**
   - use-scroll-header.ts
  - **lib/**
+  - **db/**
+   - index.ts
+  - supabase.ts
   - utils.ts
+ - **types/**
+  - supabase.ts
+- .env.local
 - .gitignore
 - .windsurfrules
 - eslint.config.mjs
