@@ -1,0 +1,51 @@
+1-file_description.md
+**Contesto**: Questo documento deve elencare i file principali del progetto e descriverne brevemente lo scopo.
+Se non esiste lo crei in @.notes “file_description.md” se invece esiste lo aggiorni, ma solo se ci sono elementi modificati rispetto al suo contenuto e quindi reputi che vada aggiornato.
+**Cartelle/File da Analizzare**:
+** @.notes/directory_structure.md 
+** Tutti i file in root (es.** package.json**,** tsconfig.json**,** tailwind.config.js**,** supabase.ts**,** ecc.).
+Eventuali configurazioni rilevanti (.eslintrc.js, .prettierrc, next.config.js, ecc.).
+**Istruzioni**:
+1.	Elenca i file principali con un bullet-point per ciascuno.
+2.	Fornisci una **breve descrizione** di cosa fa il file e perché è importante (es. “Configura ESLint per mantenere uno stile di codice uniforme Ecc”).
+3.	Se disponibile, riporta eventuali commenti in testa al file (ad esempio se c’è un header comment che spiega la logica).
+4.	Mantieni la descrizione **breve** (1-2 frasi) e chiara.
+
+coding_standards.md
+- Contesto: Definire regole di scrittura del codice e best practice condivise.
+- Se non esiste lo crei @.notes/ “**coding_standards.md**” se invece esiste lo aggiorni, ma solo se ci sono elementi modificati rispetto al suo contenuto e quindi reputi che vada aggiornato.
+- Cartelle/File da Analizzare:
+    - File di configurazione ESLint (`.eslintrc.js`) , Prettier (`.prettierrc`) @.notes/directory_structure.md , @.windsurfrules.
+    - Codice sorgente per individuare pattern ricorrenti (naming convention, struct, ecc.).
+- Istruzioni:
+    1. Spiega i principali standard di stile (indentazione, regole ESLint, formattazione Prettier).
+    2. Elenca naming convention per variabili, costanti, componenti React, tipi TypeScript.
+    3. Indica eventuali pattern da seguire (es. “usare arrow functions per i componenti”).
+    4. Se ci sono eccezioni o regole custom, descrivile chiaramente.
+
+setup_instructions.md
+    - **Contesto**: Documento che spiega come clonare, installare e avviare il progetto in locale, con eventuali note su configurazioni speciali.
+- Se non esiste lo crei @.notes/ “**setup_instructions.md**” se invece esiste lo aggiorni, ma solo se ci sono elementi modificati rispetto al suo contenuto e quindi reputi che vada aggiornato.
+- **Cartelle/File da Analizzare**:
+    - `package.json` (script di avvio, build).
+    - Eventuali file `.env.example` o simili.
+    - @directory_structure
+- **Istruzioni**:
+    1. Elenca i passaggi per il setup: `git clone`, `npm install`, `npm run dev`, ecc.
+    2. Specifica eventuali **dipendenze** da installare separatamente (es. Docker, Postgres).
+    3. Spiega come configurare `.env` (es. `SUPABASE_URL`, `SUPABASE_ANON_KEY`).
+    4. Includi **link** a documentazione esterna se necessario (es. “Creare un account Supabase e generare le chiavi…”).
+
+styling_guide.md
+    **Contesto**: Definisce le regole di utilizzo di Tailwind CSS e altre linee guida di stile.
+- Se non esiste lo crei @.notes/ “s**tyling_guide.md**” se invece esiste lo aggiorni, ma solo se ci sono elementi modificati rispetto al suo contenuto e quindi reputi che vada aggiornato.
+- **Cartelle/File da Analizzare**:
+    - `styles/` (qualsiasi file globale `.css` o `tailwind.config.js`).
+    - Esempi di componenti React con classi Tailwind.
+- **Istruzioni**:
+    1. Riassumi la configurazione di base (`tailwind.config.js`: palette colori, spaziature, estensioni, plugin).
+    2. Fornisci una guida per avere un design sempre coerente su font, pulsanti ecc nelle varie pagine e section già create (puoi consultare @directory_structure per la ricerca)
+    3. Dai consigli su come **nominare** le classi di utility o come usare `@apply`.
+    4. Indica linee guida su **responsive design** (breakpoints di Tailwind).
+    5. Spiega se usate un **design system** interno (es. set di componenti riutilizzabili).
+    Sii sempre breve e coinciso nelle linee guida
