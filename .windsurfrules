@@ -1,0 +1,134 @@
+Below is a concise set of guidelines for building and maintaining the marinadalbori website with Next.js, Supabase, and Tailwind CSS. These instructions aim to keep the codebase clean, scalable, and consistent.
+
+1A. Directory Structure guideline
+
+**Pages Router** (the one you’re using!) organizes routes under `pages/`, with file-based routing. This structure is entirely compatible with your Next.js setup.
+
+root/
+├── pages/               # Route entry points
+│   ├── api/             # API endpoints
+│   ├── admin/           # Admin-related pages (protected)
+│   ├── [dynamic-routes] # Dynamic routes
+├── components/
+
+│   ├── ui/              # Basic/shared UI (Buttons, Inputs)
+│   ├── layout/          # Layout components (Navbar, Footer)
+├── hooks/               # Reusable custom hooks
+├── lib/                 # Database, APIs, shared logic
+│   └── db/              # Abstraction for Supabase operations
+├── styles/              # Global styles, Tailwind config
+├── public/              # Static assets (images, icons)
+├── types/               # TypeScript types & interfaces
+├── utils/               # Helper functions (formatters, validators)
+└── tests/               # Unit, integration, and E2E tests
+Each folder should include a brief `README.md` or clear comments about its purpose.
+
+**1B. DB Schema & Development Notes**
+
+1. **users**
+    - **Schema**: id(UUID, PK), email(VARCHAR unique), phone(VARCHAR), role(‘guest’|‘staff’|‘admin’), created_at, updated_at
+    - **RLS**: Self can read/update own record; staff/admin can read all.
+2. **menu_categories**
+    - **Schema**: id(UUID, PK), name(VARCHAR), created_at, updated_at
+    - **RLS**: Public read; admin manages CRUD.
+3. **menu_items**
+    - **Schema**: id(UUID, PK), name(VARCHAR), description(TEXT), price(DECIMAL), created_at, updated_at
+    - **RLS**: Public read; admin manages CRUD.
+4. **menu_items_categories**
+    - **Schema**: (menu_item_id FK, category_id FK) PK on both
+    - **RLS**: Public read; admin manages links.
+5. **time_slots**
+    - **Schema**: id(UUID, PK), start_time(TIME), end_time(TIME), max_covers(INT), day_of_week(0–6), created_at, updated_at
+    - **RLS**: Public read; admin manages CRUD.
+6. **pages**
+    - **Schema**: id(UUID, PK), title(VARCHAR), slug(VARCHAR unique), created_at, updated_at
+    - **RLS**: Public read; admin CRUD for site content.
+7. **sections**
+    - **Schema**: id(UUID, PK), title(VARCHAR), content(TEXT), page_id(FK), order_index(INT), created_at, updated_at
+    - **RLS**: Public read; admin manages layout blocks.
+8. **images**
+    - **Schema**: id(UUID, PK), url(VARCHAR), section_id(FK), created_at
+    - **RLS**: Public read; admin updates images.
+9. **reservations**
+    - **Schema**: id(UUID, PK), user_id(FK), time_slot_id(FK), covers(INT), status(‘pending’|‘confirmed’|‘canceled’|‘completed’), created_at, updated_at
+    - **RLS**: Users manage their own; staff/admin see/update all.
+10. **accommodations**
+    - **Schema**: id(UUID, PK), name(VARCHAR), description(TEXT), price(DECIMAL), section_id(FK), created_at, updated_at
+    - **RLS**: Public read; admin CRUD.
+11. **fasce**
+    - **Schema**: id(UUID, PK), name(VARCHAR), description(TEXT), price(DECIMAL), section_id(FK), created_at, updated_at
+    - **RLS**: Public read; admin CRUD.
+
+**Development Tips**
+
+- **Supabase Auth**: Relies on `auth.uid()` and JWT role checks for RLS.
+- **CRUD Methods**: Keep consistent function naming (`getX`, `createX`).
+- **Performance**: Add indexes for high-traffic columns (e.g., `slug`, foreign keys).
+- **Data Validation**: Confirm numeric fields (e.g., `price`, `covers`) and day_of_week (0–6).
+2. Database Connection & Queries
+- **Single Source**: Place your Supabase client in `/lib/supabase.ts` and abstract CRUD operations in `/lib/db/`.
+- **Declarative Queries**: Name them `getX`, `createX`, `updateX`, `deleteX` and validate inputs (e.g., via Zod or Yup).
+- **Logging & Monitoring**: Log queries in development, handle errors gracefully in UI, and consider using Sentry for production monitoring.
+
+3. Security & Validation
+
+- **Authentication**: Use Supabase Auth or a secure session mechanism. Protect admin routes via server-side checks or API middlewares.
+- **Input Validation**: Validate user data before database operations to prevent SQL injection and other exploits.
+- **Error Handling**: Centralize error logs (Sentry, console in dev) and display fail-safes (error boundaries) in the UI.
+
+4. Component Management
+
+- **Naming & Organization**: Keep components small (<150 lines). Split logic into smaller sub-components or hooks as needed.
+- **UI/State**: Use local state for internal interactions; share global state (e.g., user session) via React Context or Zustand.
+- **Modularity**: Create `/components/ui/` for reusable elements, `/components/layout/` for top-level structures, `/components/sections/` for custom sections.
+
+5. Internationalization & Accessibility
+
+- **i18n**: If multiple languages are planned, store translations in `/locales/` and use Next.js i18n features.
+- **Accessibility (a11y)**: Use semantic HTML, proper `alt` tags, and test with Lighthouse or axe-core. Ensure color contrast and ARIA roles are correct.
+
+6. Styling & Design System
+
+- **Tailwind Usage**: Default to utility classes. For repeating styles, create reusable classes in `tailwind.config.js` or via `@apply`.
+- **Design System**: Maintain consistent color palettes, typography, and spacing. Consider Storybook or a UI kit to document components.
+
+7. SEO & Performance
+
+- **Meta & Head**: Use Next.js `<Head>` for titles, descriptions, and Open Graph tags.
+- **Image Optimization**: Utilize Next.js `<Image>` for responsive images, lazy loading, and modern formats.
+- **Caching**: Employ ISR (Incremental Static Regeneration) or SSR selectively. Use CDN caching for static assets.
+
+8. Codebase Maintenance
+
+- **Commit Conventions**: Use prefixes (`feat:`, `fix:`, `refactor:`) and reference issues if applicable.
+- **Lint & Format**: Configure ESLint, Prettier, and possibly Husky hooks to enforce style on each commit.
+- **Refactoring**: Continuously improve readability by extracting complex logic into helper files or custom hooks.
+
+9. Testing
+
+- **Unit & Integration**: Use Jest and React Testing Library to test components, utils, and hooks.
+- **E2E**: Validate core flows (booking, authentication) with Cypress or Playwright.
+- **Mocking**: Mock Supabase calls (e.g., with MSW) in unit tests to avoid external dependencies.
+
+10. Deployment & Environments
+
+- **Env Vars**: Store sensitive values in `.env.local`, `.env.production`, and never commit them.
+- **Multi-Stage**: Use dev, staging, and production environments.
+- **CI/CD**: Automate builds, tests, and deployments (e.g., GitHub Actions, Vercel) ensuring code quality gates pass before production.
+
+11. Logic for Changes
+
+- **Dependency Check**: Before altering a component, inspect where it’s imported. Update `/types/` if data structures change.
+- **Following Patterns**: For new features, use existing folder and code patterns.
+- **Debugging**: For UI issues, inspect DOM and Tailwind classes; for backend issues, enable query logs in dev.
+
+12. Directory & File Management
+
+- **Exports**: Use `index.ts` in directories for consolidated exports.
+- **No Duplication**: Centralize repeated logic in `/lib/` or `/utils/`; create hooks in `/hooks/` for shared UI logic.
+
+13. Scaling & Monitoring
+
+- **Indexes & Performance**: Create DB indexes for frequently queried fields.
+- **Supabase Realtime**: Use webhooks or real-time features for bookings/events if needed.
+- **Analytics**: Implement usage metrics and error tracking to refine user experience.
