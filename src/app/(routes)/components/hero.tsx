@@ -27,7 +27,7 @@ export function Hero({
           priority
           quality={100}
           sizes="100vw"
-          className="object-cover brightness-110 contrast-105 saturate-105"
+          containerClassName="object-cover brightness-110 contrast-105 saturate-105"
         />
         {/* Overlay scuro */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/25 to-black/40" />
@@ -45,7 +45,7 @@ export function Hero({
               priority
               quality={100}
               sizes="(max-width: 640px) 280px, (max-width: 768px) 400px, (max-width: 1024px) 500px, 600px"
-              className="object-contain"
+              containerClassName="object-contain"
             />
           </div>
           <p className="text-lg sm:text-xl md:text-2xl text-white font-light tracking-wider max-w-[280px] sm:max-w-xl md:max-w-2xl lg:max-w-3xl [text-shadow:_0_2px_15px_rgba(0,0,0,0.5)] leading-relaxed px-4">

@@ -39,9 +39,10 @@ const imageVariants = cva("", {
 });
 
 interface ImageProps
-  extends Omit<NextImageProps, "className" | "fill">,
+  extends Omit<NextImageProps, "fill">,
     VariantProps<typeof imageVariants> {
   containerClassName?: string;
+  className?: string;
 }
 
 const Image = forwardRef<HTMLImageElement, ImageProps>(
@@ -74,7 +75,7 @@ const Image = forwardRef<HTMLImageElement, ImageProps>(
           ref={ref}
           src={src}
           alt={alt}
-          fill={fillProp}
+          fill={fillProp ?? false}
           unoptimized={unoptimized}
           rel="preload"
           fetchPriority="high"
