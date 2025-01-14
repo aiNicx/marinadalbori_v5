@@ -81,7 +81,7 @@ const Image = forwardRef<HTMLImageElement, ImageProps>(
           fetchPriority="high"
           className={cn(
             "transition-all duration-300",
-            fillProp ? "object-cover" : "",
+            fillProp && variant === "default" ? "object-cover" : "",
             className
           )}
           {...props}
