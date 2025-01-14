@@ -27,7 +27,9 @@ export function Hero({
           priority
           quality={100}
           sizes="100vw"
-          containerClassName="object-cover brightness-110 contrast-105 saturate-105"
+          variant="default"
+          containerClassName="w-full h-full"
+          className="object-cover object-center"
         />
         {/* Overlay scuro */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/25 to-black/40" />
@@ -44,6 +46,7 @@ export function Hero({
               fill
               priority
               quality={100}
+              variant="contain"
               sizes="(max-width: 640px) 280px, (max-width: 768px) 400px, (max-width: 1024px) 500px, 600px"
               containerClassName="object-contain"
             />
