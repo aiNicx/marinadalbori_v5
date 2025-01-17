@@ -47,7 +47,7 @@ export function Header({ isHeroVisible = true }: HeaderProps) {
               Ristorante
             </Link>
             <Link
-              href="/chi-siamo"
+              href="/about"
               className={cn(
                 "text-sm lg:text-base font-medium transition-colors hover:opacity-80",
                 isTransparent ? "text-white" : "text-foreground"
@@ -141,7 +141,7 @@ export function Header({ isHeroVisible = true }: HeaderProps) {
                   Ristorante
                 </Link>
                 <Link
-                  href="/chi-siamo"
+                  href="/about"
                   className="text-lg sm:text-xl font-medium py-2 hover:text-primary"
                   onClick={() => setIsOpen(false)}
                 >

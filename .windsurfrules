@@ -1,4 +1,6 @@
 Below is a concise set of guidelines for building and maintaining the marinadalbori website with Next.js, Supabase, and Tailwind CSS. These instructions aim to keep the codebase clean, scalable, and consistent.
+PLEASE USE shadcn instead of shadcnui!
+PLEASE READ DIRECTORY STRUCTURE!
 1A. Directory Structure guideline
 Please create page's specific components (like sections!) in app/(routes)/[page name]/components or app/(routes)/components for the home page.
 public/{
