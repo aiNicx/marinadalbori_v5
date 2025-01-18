@@ -23,40 +23,40 @@ export function useScrollHeader({
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       const heroHeight = window.innerHeight;
-      const transitionStart = heroHeight * 0.8; // Inizia la transizione all'80% dell'hero
-      const transitionEnd = heroHeight; // Completa al 100%
+      const transitionStart = heroHeight * 0.8; // Start transition at 80% of hero height
+      const transitionEnd = heroHeight; // Complete transition at 100% of hero height
       
-      // Aggiorna lo stato dello scroll
+      // Update scroll state
       setScrollY(currentScrollY);
       
-      // Determina se abbiamo scrollato oltre la soglia
+      // Determine if we've scrolled past threshold
       setHasScrolled(currentScrollY > threshold);
       
-      // Se l'hero è visibile, gestiamo la trasparenza
+      // Handle transparency when hero is visible
       if (isHeroVisible) {
         if (currentScrollY <= transitionStart) {
-          // Completamente trasparente
+          // Fully transparent
           setIsTransparent(true);
         } else if (currentScrollY >= transitionEnd) {
-          // Completamente opaco
+          // Fully opaque
           setIsTransparent(false);
         } else {
-          // Durante la transizione, calcoliamo la percentuale
+          // Calculate transition progress
           const progress = (currentScrollY - transitionStart) / (transitionEnd - transitionStart);
-          setIsTransparent(progress < 0.5); // Cambia a metà della transizione
+          setIsTransparent(progress < 0.5); // Switch at 50% of transition
         }
       } else {
         setIsTransparent(false);
       }
     };
 
-    // Aggiungi l'event listener
+    // Add scroll event listener
     window.addEventListener("scroll", handleScroll, { passive: true });
     
-    // Esegui un controllo iniziale
+    // Perform initial check
     handleScroll();
 
-    // Cleanup
+    // Remove event listener on cleanup
     return () => window.removeEventListener("scroll", handleScroll);
   }, [threshold, isHeroVisible]);
 

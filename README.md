@@ -20,6 +20,29 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Design System
+
+This project implements a comprehensive design system to ensure consistency across all pages and components. The design system includes standardized:
+
+- Colors and typography
+- Component styles and patterns
+- Layout structures
+- Responsive design guidelines
+- Spacing conventions
+
+### Resources
+
+- View the complete styling guide at [.notes/styling_guide.md](./.notes/styling_guide.md)
+- Explore the interactive design system components at [/design-system](/design-system)
+
+### Usage Guidelines
+
+1. Always refer to the styling guide when creating new components
+2. Use the predefined design tokens for colors, spacing, and typography
+3. Follow the responsive design patterns outlined in the documentation
+4. Maintain consistency with existing components
+5. Utilize the provided base components from the UI library
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

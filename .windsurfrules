@@ -111,3 +111,32 @@ Each folder should include a brief `README.md` or clear comments about its purpo
 - **Indexes & Performance**: Create DB indexes for frequently queried fields.
 - **Supabase Realtime**: Use webhooks or real-time features for bookings/events if needed.
 - **Analytics**: Implement usage metrics and error tracking to refine user experience.
+
+14. UI & Design Consistency
+- **Component Standards**: 
+  - Use shadcn components from `/components/ui/` as the primary UI building blocks
+  - Follow the component structure defined in the styling guide for Button, Card, Sheet, Typography, and other base components
+  - Maintain consistent props and variants across component usage
+
+- **Styling Guidelines**:
+  - Reference color tokens from `tailwind.config.ts` using the defined CSS variables (--primary, --secondary, etc.)
+  - Follow typography scale and spacing defined in the styling guide
+  - Use container configurations as specified in tailwind config for consistent layouts
+  - Implement dark mode support using the "class" strategy
+
+- **Responsive Design**:
+  - Follow mobile-first approach starting with base styles
+  - Use standard Tailwind breakpoints (sm, md, lg, xl, 2xl)
+  - Implement fluid layouts using grid and flex patterns from the styling guide
+  - Test responsive behavior across all breakpoints
+
+- **Design Tokens**:
+  - Use border-radius tokens (sm, md, lg) from theme configuration
+  - Apply consistent spacing using the spacing scale
+  - Maintain color consistency using theme color tokens
+
+- **Naming & Organization**:
+  - Follow BEM-like naming for custom components
+  - Order Tailwind classes: layout → dimensions → spacing → colors → states
+  - Use descriptive class names with proper namespacing
+  - Create reusable patterns using @apply only for frequently repeated styles

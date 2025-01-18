@@ -13,7 +13,7 @@ export function Hero({ subtitle, backgroundImage }: HeroProps) {
       <div className="absolute inset-0">
         <Image
           src={backgroundImage}
-          alt="Marina d'Albori Chi Siamo"
+          alt="Marina d'Albori - La nostra storia e filosofia nel cuore della Costiera Amalfitana"
           fill
           priority
           quality={100}
