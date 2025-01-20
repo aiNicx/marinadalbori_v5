@@ -9,7 +9,7 @@ export const ParadisoLocal = () => {
             <div className="space-y-3">
               <h2 className="text-3xl md:text-4xl xl:text-5xl font-semibold tracking-tight text-zinc-800">Il Paradiso dei Local</h2>
               <p className="text-base md:text-lg text-zinc-600 max-w-[65ch] mx-auto leading-relaxed">
-                Marina d&apos;Albori è un luogo dove la modernità incontra l&apos;autenticità. Abbiamo creato uno spazio che celebra il carattere unico della nostra location, offrendo ai nostri ospiti un&apos;esperienza contemporanea senza perdere il fascino della tradizione locale.
+                Marina d&apos;Albori è un luogo dove il passato sposa il futuro. Abbiamo creato uno spazio che celebra il carattere unico della nostra location, offrendo ai nostri ospiti un&apos;esperienza contemporanea senza perdere il fascino della tradizione locale.
               </p>
               <p className="text-base md:text-lg text-zinc-600 max-w-[65ch] mx-auto leading-relaxed">
                 Il nostro impegno è quello di preservare l&apos;essenza del territorio mentre innoviamo per garantire il massimo comfort e qualità. Ogni dettaglio, dall&apos;arredamento al servizio, è stato pensato per creare un ambiente che rispecchi l&apos;anima della Costiera Amalfitana.

@@ -1,0 +1,63 @@
+HOME
+SEZIONE HERO
+Titolo: Marina d'Albori
+Testo: Dove il mare incontra i sapori autentici della Costiera Amalfitana
+CTA: Guarda il menu
+
+SEZIONE RISTORANTE
+Titolo: Il Ristorante
+Sottotitolo: Tradizione e Sapori del Mediterraneo
+Testo:
+- Marinadalbori non è solo un ristorante, ma un'esperienza che abbraccia l'anima della Costiera Amalfitana. Con la sua incredibile posizione in riva al mare, il ristorante offre una vista spettacolare e tramonti da cartolina.
+- Ogni piatto che serviamo al ristorante di Marina d'Albori è un'espressione della passione per la cucina mediterranea. Con il pescato del giorno, le verdure fresche di stagione e una selezione di vini pregiati, il nostro menù celebra la semplicità e la ricchezza della tradizione locale.
+- Vieni a trovarci e lasciati conquistare dall'atmosfera accogliente e dal panorama unico, per un'esperienza culinaria che rispecchia il legame profondo con la nostra terra.
+CTA: Prenota un Tavolo
+
+SEZIONE CUCINA
+Titolo: La Nostra Cucina
+Testo:
+- La nostra filosofia in cucina è semplice: utilizzare ingredienti freschi e di alta qualità per creare piatti che esaltino i sapori autentici della tradizione mediterranea.
+- Il nostro chef seleziona personalmente i migliori prodotti locali, dando particolare attenzione al pesce fresco del giorno e alle verdure di stagione.
+CTA: Scopri il Menu
+
+SEZIONE SPIAGGE
+Titolo: Le Spiagge
+Sottotitolo: Un paradiso tra mare e roccia
+Testo:
+- Marina d'Albori è un gioiello incastonato nella Costiera Amalfitana, dove le scogliere si tuffano nel mare cristallino creando scenari da cartolina.
+- Le nostre spiagge attrezzate offrono comfort e relax, mentre i scenari da cartolina della costa regalano attimi memorabili.
+- Vieni a scoprire la magia delle nostre spiagge, dove il blu del mare si fonde con il fascino delle antiche tradizioni marinare della Costiera.
+CTA: Scopri le Spiagge
+
+ABOUT
+SEZIONE HERO
+Titolo: Chi Siamo
+Testo: Dove tradizione e innovazione si fondono sulla Costiera Amalfitana
+
+SEZIONE STORIA
+Titolo: La Nostra Storia
+Sottotitolo: Un Angolo di Paradiso sulla Costa d'Amalfi
+Testo:
+- Dal 1960, Marina d'Albori rappresenta un punto di riferimento sulla Costiera Amalfitana, dove la bellezza naturale si fonde con l'ospitalità autentica.
+- Nel corso degli anni, ci siamo evoluti mantenendo sempre vivo il legame con le nostre radici. Oggi, Marina d'Albori è un luogo dove passato e futuro si fondono.
+- La nostra missione è preservare e condividere la magia di questo luogo speciale, garantendo ai nostri ospiti ricordi indelebili immersi nella bellezza della Costiera Amalfitana.
+CTA: Contattaci
+
+SEZIONE FILOSOFIA
+Titolo: L'Esperienza Marina d'Albori
+Testo:
+- Benvenuti a Marina d'Albori, dove tradizione e modernità si fondono in un'atmosfera unica sulla Costa Amalfitana.
+- Ci impegniamo a offrire un servizio d'eccellenza che combina comfort moderno con il fascino locale.
+- Ogni dettaglio è curato con attenzione, dalla qualità dei nostri servizi all'atmosfera accogliente, per garantire ai nostri ospiti un'esperienza unica sulla costa.
+
+SEZIONE LOCAL
+Titolo: Il Paradiso dei Local
+Testo:
+- Marina d'Albori è un luogo dove il passato sposa il futuro. Abbiamo creato uno spazio che celebra il carattere unico della nostra location.
+- Il nostro impegno è quello di preservare l'essenza del territorio mentre innoviamo per garantire il massimo comfort e qualità.
+- Qui, i nostri ospiti possono godere di servizi moderni e comfort contemporanei, sempre circondati dall'atmosfera autentica e dal calore dell'ospitalità locale che caratterizza la nostra terra.
+
+SEZIONE CONTATTO
+Titolo: Pronti a Vivere un'Esperienza Unica?
+Testo: Siamo qui per rendere il tuo soggiorno indimenticabile. Contattaci per informazioni, prenotazioni o qualsiasi domanda tu possa avere.
+CTA: Contattaci Ora

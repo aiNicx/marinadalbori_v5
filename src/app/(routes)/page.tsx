@@ -17,7 +17,7 @@ export default function HomePage() {
       <Header isHeroVisible />
       <main className="relative w-full">
         <Hero
-          subtitle="Un'esperienza unica tra mare e sapori in Costiera Amalfitana"
+          subtitle="Dove il mare incontra i sapori autentici della Costiera Amalfitana"
           backgroundImage="/images/hero.jpg"
           ctaText="Guarda il menu"
           ctaHref="#menu"

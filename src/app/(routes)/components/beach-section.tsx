@@ -21,8 +21,8 @@ export const BeachSection = () => {
               di straordinaria bellezza.
             </p>
             <p className="text-base md:text-lg text-zinc-600 leading-relaxed max-w-[65ch]">
-              Le nostre spiagge attrezzate offrono comfort e relax, mentre il panorama 
-              mozzafiato della costa regala momenti indimenticabili. Ogni angolo racconta 
+              Le nostre spiagge attrezzate offrono comfort e relax, mentre i
+              scenari da cartolina della costa regalano attimi memorabili. Ogni angolo racconta
               una storia millenaria, ogni scorcio è una cartolina da vivere.
             </p>
             <p className="text-base md:text-lg text-zinc-600 leading-relaxed max-w-[65ch]">

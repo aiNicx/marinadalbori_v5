@@ -31,10 +31,10 @@ export const OurStory = () => {
               Dal 1960, Marina d&apos;Albori rappresenta un punto di riferimento sulla Costiera Amalfitana, dove la bellezza naturale si fonde con l&apos;ospitalità autentica. La nostra storia è profondamente radicata in questo angolo di paradiso, dove ogni giorno il mare racconta storie di tradizione e passione.
             </p>
             <p className="text-base md:text-lg text-zinc-600 leading-relaxed max-w-[65ch]">
-              Nel corso degli anni, ci siamo evoluti mantenendo sempre vivo il legame con le nostre radici. Oggi, Marina d&apos;Albori è un luogo dove modernità e tradizione si incontrano, offrendo ai nostri ospiti un&apos;esperienza unica che combina comfort contemporaneo e autenticità locale.
+              Nel corso degli anni, ci siamo evoluti mantenendo sempre vivo il legame con le nostre radici. Oggi, Marina d&apos;Albori è un luogo dove passato e futuro si fondono, offrendo ai nostri ospiti un&apos;esperienza unica che combina comfort contemporaneo e autenticità locale.
             </p>
             <p className="text-base md:text-lg text-zinc-600 leading-relaxed max-w-[65ch]">
-              La nostra missione è preservare e condividere la magia di questo luogo speciale, garantendo ai nostri ospiti momenti indimenticabili immersi nella bellezza della Costiera Amalfitana.
+              La nostra missione è preservare e condividere la magia di questo luogo speciale, garantendo ai nostri ospiti ricordi indelebili immersi nella bellezza della Costiera Amalfitana.
             </p>
           </div>
           <Button

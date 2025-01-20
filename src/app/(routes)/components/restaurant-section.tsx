@@ -29,8 +29,8 @@ export const RestaurantSection = () => {
           <div className="space-y-4 mt-6">
             <p className="text-base md:text-lg text-zinc-600 leading-relaxed max-w-[65ch]">
               Marinadalbori non è solo un ristorante, ma un&apos;esperienza che abbraccia 
-              l&apos;anima della Costiera Amalfitana. Con la sua incredibile posizione in riva al 
-              mare, il ristorante offre un panorama mozzafiato e tramonti indimenticabili.
+              l&apos;anima della Costiera Amalfitana. Con la sua incredibile posizione in riva al
+              mare, il ristorante offre una vista spettacolare e tramonti da cartolina.
             </p>
             <p className="text-base md:text-lg text-zinc-600 leading-relaxed max-w-[65ch]">
               Ogni piatto che serviamo al ristorante di Marina d&apos;Albori è un&apos;espressione 

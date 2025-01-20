@@ -9,10 +9,10 @@ export const LaNostraFilosofia = () => {
             <div className="space-y-3">
               <h2 className="text-3xl md:text-4xl xl:text-5xl font-semibold tracking-tight text-zinc-800">L&apos;Esperienza Marina d&apos;Albori</h2>
               <p className="text-base md:text-lg text-zinc-600 max-w-[65ch] mx-auto leading-relaxed">
-                Benvenuti a Marina d&apos;Albori, dove la tradizione incontra l&apos;innovazione in un&apos;atmosfera unica sulla Costa Amalfitana. La nostra filosofia si fonda sulla creazione di esperienze autentiche che celebrano la bellezza naturale e il ricco patrimonio culturale del nostro territorio.
+                Benvenuti a Marina d&apos;Albori, dove tradizione e modernità si fondono in un&apos;atmosfera unica sulla Costa Amalfitana. La nostra filosofia si fonda sulla creazione di esperienze autentiche che celebrano la bellezza naturale e il ricco patrimonio culturale del nostro territorio.
               </p>
               <p className="text-base md:text-lg text-zinc-600 max-w-[65ch] mx-auto leading-relaxed">
-                Ci impegniamo a offrire un servizio d&apos;eccellenza che combina comfort moderno con il fascino locale. Ogni dettaglio è curato con attenzione, dalla qualità dei nostri servizi all&apos;atmosfera accogliente, per garantire ai nostri ospiti un&apos;esperienza indimenticabile sulla costa.
+                Ci impegniamo a offrire un servizio d&apos;eccellenza che combina comfort moderno con il fascino locale. Ogni dettaglio è curato con attenzione, dalla qualità dei nostri servizi all&apos;atmosfera accogliente, per garantire ai nostri ospiti un&apos;esperienza unica sulla costa.
               </p>
             </div>
           </div>
